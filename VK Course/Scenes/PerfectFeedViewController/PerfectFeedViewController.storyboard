@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJU-Au-aRq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Perfect Feed View Controller-->
+        <scene sceneID="F18-0e-Itr">
+            <objects>
+                <viewController id="XJU-Au-aRq" customClass="PerfectFeedViewController" customModule="VK_Course" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iRM-S8-bfj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-Uz-K7d" customClass="GradientView" customModule="VK_Course" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.21176470589999999" green="0.71372549019999998" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.043137254899999998" green="0.98039215690000003" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0hp-VV-zkb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XJU-Au-aRq" id="Hia-8j-TR6"/>
+                                    <outlet property="delegate" destination="XJU-Au-aRq" id="2Kc-k4-G7D"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0hp-VV-zkb" firstAttribute="trailing" secondItem="jaF-Y2-JVB" secondAttribute="trailing" id="8UP-wf-792"/>
+                            <constraint firstItem="jaF-Y2-JVB" firstAttribute="bottom" secondItem="0hp-VV-zkb" secondAttribute="bottom" id="Btr-cy-faH"/>
+                            <constraint firstItem="0hp-VV-zkb" firstAttribute="leading" secondItem="jaF-Y2-JVB" secondAttribute="leading" id="Bxx-bN-fmo"/>
+                            <constraint firstItem="0hp-VV-zkb" firstAttribute="top" secondItem="iRM-S8-bfj" secondAttribute="top" id="L7c-bp-hgk"/>
+                            <constraint firstItem="jaF-Y2-JVB" firstAttribute="bottom" secondItem="9uC-Uz-K7d" secondAttribute="bottom" id="e4W-rT-LvM"/>
+                            <constraint firstItem="jaF-Y2-JVB" firstAttribute="trailing" secondItem="9uC-Uz-K7d" secondAttribute="trailing" id="gCB-d7-u1m"/>
+                            <constraint firstItem="9uC-Uz-K7d" firstAttribute="leading" secondItem="jaF-Y2-JVB" secondAttribute="leading" id="ixR-2r-ed6"/>
+                            <constraint firstItem="9uC-Uz-K7d" firstAttribute="top" secondItem="jaF-Y2-JVB" secondAttribute="top" id="mAg-mO-xP9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jaF-Y2-JVB"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="0hp-VV-zkb" id="vog-qf-kbn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsE-X7-1U0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="190"/>
+        </scene>
+    </scenes>
+</document>
