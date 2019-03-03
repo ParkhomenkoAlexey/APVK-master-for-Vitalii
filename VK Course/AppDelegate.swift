@@ -73,9 +73,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiceDelegate {
     func authServiceDidSignIn() {
         //print(#function)
         
-        if !(window?.rootViewController is NewFeedViewController) {
+        if !(window?.rootViewController is PerfectFeedViewController) {
 
-            let feedVC = NewFeedViewController.loadFromStoryboard()
+            let feedVC = PerfectFeedViewController.loadFromStoryboard()
             let navVC = UINavigationController(rootViewController: feedVC)
             window?.rootViewController = navVC
            
